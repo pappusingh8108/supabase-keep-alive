@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Supabase API
-        run: curl -I https://supabase.com/dashboard/project/ryhoeoteonqoihpneuzm/editor/17278?sort=created_at:desc
+        run: curl -I https://ryhoeoteonqoihpneuzm.supabase.co/rest/v1/users?select=id&limit=1
