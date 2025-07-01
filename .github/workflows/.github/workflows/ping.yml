@@ -1,0 +1,13 @@
+name: Keep Supabase Alive
+
+on:
+  schedule:
+    - cron: '0 8 */7 * *'  # Every 7 days at 8:00 UTC
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase API
+        run: curl -I https://supabase.com/dashboard/project/ryhoeoteonqoihpneuzm/editor/17278?sort=created_at:desc
